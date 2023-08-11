@@ -1,0 +1,12 @@
+name : CICD For Serverless
+run-name : ${{ github.actor }} is doing CICD Serverless Application
+
+on:
+  push:
+    branches: [ main, "*"]
+
+jobs: 
+  pre-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "The job is automatically triggered by a ${{ github.event_name }} event."
